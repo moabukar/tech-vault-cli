@@ -12,13 +12,10 @@
 
 Tech-Vault CLI is a command-line interface that fetches random technical interview questions from [Tech-Vault](https://github.com/moabukar/tech-vault). This tool is perfect for those who are looking to prepare for tech interviews and want a quick and easy way to get random questions.
 
-## Table of Contents
-
 - [Tech-Vault CLI](#tech-vault-cli)
-  - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [Install via Brew](#install-via-brew)
+  - [Usage](#usage)
   - [Building from Source](#building-from-source)
   - [Using Docker](#using-docker)
   - [Contributing](#contributing)
@@ -33,14 +30,6 @@ To install the CLI tool, you can download the latest binary from the [releases p
 go get -u github.com/moabukar/tech-vault-cli/cmd/techvault
 ```
 
-## Usage
-
-After installation, you can fetch a random tech interview question by running:
-
-```
-techvault random
-```
-
 ## Install via Brew
 
 ```
@@ -51,9 +40,28 @@ brew install techvault
 techvault random
 ```
 
+## Usage
+
+After installation, you can fetch a random tech interview question by running:
+
+```bash
+
+❯ techvault
+NAME:
+   techvault - Get random interview questions from Tech Vault
+
+USAGE:
+   techvault [global options] command [command options] [arguments...]
+
+COMMANDS:
+   random   Show a random tech question
+   help, h  Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h  show help
+```
 
 ## Building from Source
-
 
 ```
 
@@ -72,20 +80,19 @@ go install ./cmd/techvault
 
 ```
 
-docker build -t techvault Dockerfile (defaultfor Mac)
+docker build -t techvault Dockerfile (default for Mac)
 
 docker build Dockerfile.dev -t techvault --build-arg GOOS=linux --build-arg GOARCH=amd64 (for Linux)
 
-For windows:
+**For windows:**
 
-docker build Dockerfile.dev -t techvault --build-arg GOOS=windows --build-arg GOARCH=amd64
+- docker build Dockerfile.dev -t techvault --build-arg GOOS=windows --build-arg GOARCH=amd64
 
-docker run techvault
+- docker run techvault
 
-Exec into the container:
+**Exec into the container:**
 
-
-docker exec -it techvault /bin/sh
+- docker exec -it techvault /bin/sh
 
 ```
 
@@ -101,4 +108,4 @@ This project is licensed under the Apache License - see the LICENSE file for det
 ## TODO
 
 - Fix tests (questions is failing due to input in main function)
-- Add more features
+- Add more features (choose questions from other topics)
