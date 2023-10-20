@@ -26,8 +26,8 @@ archives:
       - LICENSE
       - README.md
 
-dockers:
-  - image_templates:
-      - "moabukar/techvault:{{ .Tag }}"
-      - "moabukar/techvault:latest"
-    dockerfile: "Dockerfile"
+# dockers:
+#   - image_templates:
+#       - "moabukar/techvault:{{ .Tag }}"
+#       - "moabukar/techvault:latest"
+#     dockerfile: "Dockerfile"
