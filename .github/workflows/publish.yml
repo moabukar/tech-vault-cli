@@ -41,3 +41,4 @@ jobs:
           docker tag $primary_tag $retention_tag
           docker push $retention_tag
         fi
+
