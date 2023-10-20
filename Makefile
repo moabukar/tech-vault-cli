@@ -45,7 +45,7 @@ docker-run: docker-build
 .PHONY: release
 release: ## Build & release the binaries (stable)
 	git tag -d edge
-	goreleaser release --rm-dist
+	goreleaser release --clean
 	find dist -type f -name "*.snap" -exec snapcraft upload --release stable,edge '{}' \;
 
 .PHONY: prerelease
