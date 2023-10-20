@@ -25,3 +25,7 @@ go.work
 techvault
 
 ./techvault
+
+./dist/
+
+dist/
