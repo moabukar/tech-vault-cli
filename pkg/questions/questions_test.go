@@ -23,7 +23,6 @@ func (m *MockHttpClient) Get(url string) (*http.Response, error) {
 }
 
 func TestGetRandomQuestion(t *testing.T) {
-
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
