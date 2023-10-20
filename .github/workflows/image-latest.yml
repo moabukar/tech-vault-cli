@@ -1,9 +1,9 @@
-name: TechVault new image
+name: TechVault CLI
 
 on:
-    push:
-      branches:
-        - main
+  push:
+    branches:
+      - main
 
 jobs:
   build-and-publish:
@@ -13,35 +13,31 @@ jobs:
       contents: write
 
     steps:
-      - name: Check out
-        uses: actions/checkout@v2
+    - name: Check out
+      uses: actions/checkout@v2
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v1
-        with:
-            username: ${{ secrets.DOCKER_HUB_USERNAME }}
-            password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Build and Publish
-        run: |
-          registry="moabukar"
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-          sha=$(git rev-parse --short HEAD)
+    - name: Build and Publish
+      run: |
+        registry="moabukar"
+        sha=$(git rev-parse --short HEAD)
+        primary_tag="${registry}/techvault:${sha}"
+        
+        docker build . -t $primary_tag
+        docker push $primary_tag
 
-          primary_tag="${registry}/techvault:${sha}"
-
-          
-          docker build . -t $primary_tag
-
-          docker push $primary_tag
-
-          current_branch=$(git rev-parse --abbrev-ref HEAD)
-          if [ $current_branch = 'main' ]
-          then
-            retention_tag="${registry}/techvault:rc-${sha}"
-            docker tag $primary_tag $retention_tag
-            docker push $retention_tag
-          else
-            retention_tag="${registry}/techvault:alpha-${sha}"
-            docker tag $primary_tag $retention_tag
-            docker push $retention_tag
-          fi
+        current_branch=$(git rev-parse --abbrev-ref HEAD)
+        if [ "$current_branch" = "main" ]; then
+          retention_tag="${registry}/techvault:rc-${sha}"
+          docker tag $primary_tag $retention_tag
+          docker push $retention_tag
+        else
+          retention_tag="${registry}/techvault:alpha-${sha}"
+          docker tag $primary_tag $retention_tag
+          docker push $retention_tag
+        fi
