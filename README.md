@@ -51,7 +51,13 @@ go install ./cmd/techvault
 
 ```
 
-docker build -t techvault .
+docker build -t techvault Dockerfile (defaultfor Mac)
+
+docker build Dockerfile.dev -t techvault --build-arg GOOS=linux --build-arg GOARCH=amd64 (for Linux)
+
+For windows:
+
+docker build Dockerfile.dev -t techvault --build-arg GOOS=windows --build-arg GOARCH=amd64
 
 docker run techvault
 
