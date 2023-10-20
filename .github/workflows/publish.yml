@@ -2,8 +2,11 @@ name: TechVault CLI
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - .Dockerfile
+      - .github/workflows/publish.yml
+      - cmd
+      - pkg
 
 jobs:
   build-and-publish:
