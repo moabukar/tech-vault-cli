@@ -1,0 +1,33 @@
+before:
+  hooks:
+    # Install dependencies here, or tidy up
+    - go mod tidy
+    - go generate ./...
+
+builds:
+  - id: "techvault"
+    main: "./cmd/techvault/main.go"
+    binary: "techvault"
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - 386
+
+archives:
+  - id: "techvault"
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE
+      - README.md
+
+dockers:
+  - image_templates:
+      - "moabukar/techvault:{{ .Tag }}"
+      - "moabukar/techvault:latest"
+    dockerfile: "Dockerfile"
