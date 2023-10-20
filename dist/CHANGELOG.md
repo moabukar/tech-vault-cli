@@ -1,4 +1,6 @@
 ## Changelog
+* f6e1294 update goreleaseer
+* b78e8c4 .
 * 725dade p
 * a36ff5c add to Makefile
 * 5bcc211 test c

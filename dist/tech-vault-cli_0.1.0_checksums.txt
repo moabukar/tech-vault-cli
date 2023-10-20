@@ -1,5 +1,5 @@
-2e9ab79b007239a829c51fa54791f296dcd11eefd3cf1cccc51410beb7c51186  tech-vault-cli_0.1.0_linux_386.tar.gz
-33766e85ae02fce1f4b10c94511f15a57a833557eeb09b392a99a41e576c3e84  tech-vault-cli_0.1.0_windows_amd64.zip
-5c0753f3fcd17525cf633e53a7edc49a843a625de29234974b8b195b8600098a  tech-vault-cli_0.1.0_windows_386.zip
-7ff87ded4b1174706a825b95d8904609c9b58e7badb360ba290da9f116e849fb  tech-vault-cli_0.1.0_darwin_amd64.tar.gz
-d392f8bba3366c1e8d7f899d9c84df57a9048e9a2350bf32b9d6d1252dee7710  tech-vault-cli_0.1.0_linux_amd64.tar.gz
+400cc38ca4a742ab02e015a7bfe7b010ec3ba7182bb6d819af7f3665a07acea7  tech-vault-cli_0.1.0_windows_386.zip
+5c4b4455f2ac7aeec85c096cccf62c16cb564785b2c7b7465438c77ddd421d80  tech-vault-cli_0.1.0_linux_amd64.tar.gz
+7263da07c3ca78a827a2fef897b623e225d0803a821bfeaea78363e016d74819  tech-vault-cli_0.1.0_linux_386.tar.gz
+da17f672151fec47ddc36c24e4f295a13dd6552f4b4eeebb8c9e53204dee612b  tech-vault-cli_0.1.0_windows_amd64.zip
+f682637747e8db579ba9d07f2d3cd9066bf6b8a7b53071e3aaaf1d60aeee9887  tech-vault-cli_0.1.0_darwin_amd64.tar.gz

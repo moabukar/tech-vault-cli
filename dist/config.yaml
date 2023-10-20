@@ -48,16 +48,6 @@ snapshot:
 checksum:
   name_template: '{{ .ProjectName }}_{{ .Version }}_checksums.txt'
   algorithm: sha256
-dockers:
-  - goos: linux
-    goarch: amd64
-    goarm: "6"
-    goamd64: v1
-    dockerfile: Dockerfile
-    image_templates:
-      - moabukar/techvault:{{ .Tag }}
-      - moabukar/techvault:latest
-    use: docker
 dist: dist
 env_files:
   github_token: ~/.config/goreleaser/github_token
