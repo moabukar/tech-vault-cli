@@ -18,4 +18,3 @@ COPY --from=builder /techvault /techvault
 
 ENTRYPOINT ["/techvault"]
 CMD ["random"]
-
