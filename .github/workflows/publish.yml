@@ -3,7 +3,7 @@ name: TechVault CLI
 on:
   push:
     paths:
-      - .Dockerfile
+      - Dockerfile
       - .github/workflows/publish.yml
       - cmd
       - pkg
