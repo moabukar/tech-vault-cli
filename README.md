@@ -1,6 +1,6 @@
 # Tech-Vault CLI
 
-![Tech-Vault CLI](./images/tech-vault.png)
+![Tech-Vault CLI](.images/Tech-Vault.png)
 
 Tech-Vault CLI is a command-line interface that fetches random technical interview questions from [Tech-Vault](https://github.com/moabukar/tech-vault). This tool is perfect for those who are looking to prepare for tech interviews and want a quick and easy way to get random questions.
 
@@ -11,6 +11,7 @@ Tech-Vault CLI is a command-line interface that fetches random technical intervi
   - [Installation](#installation)
   - [Usage](#usage)
   - [Building from Source](#building-from-source)
+  - [Using Docker](#using-docker)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -43,6 +44,16 @@ cd tech-vault-cli
 
 
 go install ./cmd/techvault
+
+```
+
+## Using Docker
+
+```
+
+docker build -t techvault .
+
+docker run techvault
 
 ```
 

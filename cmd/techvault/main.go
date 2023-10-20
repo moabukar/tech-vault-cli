@@ -6,13 +6,13 @@ import (
 	"os"
 
 	"github.com/moabukar/tech-vault-cli/pkg/questions"
-	"github.com/urfave/cli/v2"
+	cli "github.com/urfave/cli/v2"
 )
 
 func main() {
 	app := &cli.App{
-		Name:  "tech-vault",
-		Usage: "Get random tech interview questions",
+		Name:  "techvault",
+		Usage: "Get random interview questions from Tech Vault",
 		Commands: []*cli.Command{
 			{
 				Name:  "random",
