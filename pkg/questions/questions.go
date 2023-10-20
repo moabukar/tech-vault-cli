@@ -12,7 +12,7 @@ type HttpClient interface {
 	Get(url string) (*http.Response, error)
 }
 
-func GetRandomQuestion(client HttpClient) (string, error) {
+func GetRandomQuestion() (string, error) {
 	url := "https://raw.githubusercontent.com/moabukar/tech-vault/main/README.md"
 	resp, err := http.Get(url)
 	if err != nil {
