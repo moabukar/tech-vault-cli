@@ -20,6 +20,7 @@ Tech-Vault CLI is a command-line interface that fetches random technical intervi
   - [Using Docker](#using-docker)
   - [Contributing](#contributing)
   - [License](#license)
+  - [TODO](#todo)
 
 ## Installation
 
@@ -67,6 +68,11 @@ docker build Dockerfile.dev -t techvault --build-arg GOOS=windows --build-arg GO
 
 docker run techvault
 
+Exec into the container:
+
+
+docker exec -it techvault /bin/sh
+
 ```
 
 ## Contributing
@@ -76,3 +82,9 @@ Feel free to open issues or pull requests to improve this tool. All contribution
 ## License
 
 This project is licensed under the Apache License - see the LICENSE file for details.
+
+
+## TODO
+
+- Fix tests (questions is failing due to input in main function)
+- Add more features
